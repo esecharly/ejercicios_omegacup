@@ -1,20 +1,19 @@
 import math
 def _main() -> None:
   n = int(input())
-  a = input()
+  valorPociones = input()
   h = 0
   k = 1
   p = 2
   
-  lista = a.split(" ")
-  listaPociones = [eval(i) for i in lista] 
-  estadisticas = input()
-  lista2 = estadisticas.split(" ")
-  listaEstadisticas = [eval(j) for j in lista2]
+  listaPociones = valorPociones.split(" ")
+  listaPociones = [eval(i) for i in listaPociones] 
   
-  resultado = listaEstadisticas[k] * listaEstadisticas[p] 
-  resultado2 = resultado / listaEstadisticas[h]
-  s = listaEstadisticas[p] - math.ceil(resultado2 * listaEstadisticas[k])
+  estadisticas = input()
+  listaEstadisticas = estadisticas.split(" ")
+  listaEstadisticas = [eval(j) for j in listaEstadisticas]
+  
+  s = listaEstadisticas[p] - math.ceil((math.pow(listaEstadisticas[k], 2) * listaEstadisticas[p]) / listaEstadisticas[h])
   pf = listaEstadisticas[p] - s
   pociones = 0
   x = 1
